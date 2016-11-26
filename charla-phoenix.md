@@ -1,6 +1,10 @@
 Charla Elixir Noviembre
 ===================
 
+A continuación podrán leer la charla completa, con código incluído para que no tengan que ir a las diapositivas. Aunque si quieren ver las diapositivas originales, pueden encontrarlas en el siguiente link:
+
+https://docs.google.com/presentation/d/11LIMj7ju6tih5qcxN_F4bX_mi2_WVAaXd7bx3mBo7RY/edit?usp=sharing
+
 # Introducción
 
 Hola a todos. Mi nombre es Nicanor Perera. Trabajo en Snappler. Hace varios años que trabajo como desarrollador Ruby on Rails, y hace algunos meses estoy haciendo experimentos con el lenguaje de programación Elixir y el framework web Phoenix.
