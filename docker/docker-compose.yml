@@ -1,0 +1,23 @@
+version: '2'
+services:
+  app:    
+    build: .
+    command: rails server -p 3000 -b '0.0.0.0'
+    tty: true
+    stdin_open: true    
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    links:
+      - db
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    volumes:     
+      - /var/mysql-docker/NOMBRE-PROYECTO:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "4408:3306"
