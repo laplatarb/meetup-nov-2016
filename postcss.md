@@ -5,7 +5,7 @@ Al usar Rails, cualquier desarrollador (full-stack) se habrá encontrado con alg
 - **Mucho javascript** en las vistas puede resultar **no muy atractivo** para un ruby developer
 - **Bootstrap/Foundation** me gustan, son fáciles de usar, pero ponerme a modificarlos **nunca queda como quiero** ni se bien que es lo que está pasando por debajo
 
-Con Postcss, cualquiera es capaz de crear su propio fronte-end framework a bajo costo de tiempo y esfuerzo. La variedad y gran practicidad de plugins que Postcss dispone, hacen de su uso una gran herramienta a la hora de programar interfaces de usuario.
+Con Postcss, cualquiera es capaz de crear su propio front-end framework a bajo costo de tiempo y esfuerzo. La variedad y gran practicidad de plugins que Postcss dispone, hacen de su uso una gran herramienta a la hora de programar interfaces de usuario.
 
 # Postcss en Ruby on Rails
 
@@ -102,20 +102,7 @@ _Aplicación de Rails ya creada_
            })
         })
 
-        gulp.task('watch', function(){
-          gulp.watch('./gulp/stylesheets/*.css', ['css'])
-          gulp.watch('./app/views/**/*.html').on('change', function(){
-             browserSync.reload()
-           })
-        })
-
         gulp.task('default', ['watch', 'serve'])
-
-
-## Ejemplos
-El siguiente [ejemplo](https://github.com/juanmanuelramallo/postcss-rails-laplatarb) fue desarrollado para una charla en laplata.rb. Ver el código fuente en CSS **/gulp/stylesheets/main.css** que tiene comentarios en cada línea que usa un plugin de Postcss.
-
-En producción, se puede observar la página de un [estudio inmobiliario platense](cabralpropiedades.com.ar) que dispone toda la interfaz de usuario creada con Postcss (sin usar ningún framework de front-end como Bootstrap o Foundation), y que al mismo tiempo usa para la sección de administración el *Rails asset pipeline* sin crear conflictos entre ambos caminos que toman los archivos de estilos.
 
 ## Consideraciones
 
@@ -123,5 +110,10 @@ En producción, se puede observar la página de un [estudio inmobiliario platens
 - El archivo principal del código CSS será: **/gulp/stylesheets/main.css**
 - Todo lo procesado por Postcss irá directo a **/public/assets**
 - Para correr el servidor local con live-reloading se debe primero poner a correr `rails server` y luego `gulp` en la terminal
+
+## Ejemplos
+El siguiente [ejemplo](https://github.com/juanmanuelramallo/postcss-rails-laplatarb) fue desarrollado para una charla en laplata.rb. Ver el código fuente en CSS **/gulp/stylesheets/main.css** que tiene comentarios en cada línea que usa un plugin de Postcss.
+
+En producción, se puede observar la página de un [estudio inmobiliario platense](cabralpropiedades.com.ar) que dispone toda la interfaz de usuario creada con Postcss (sin usar ningún framework de front-end como Bootstrap o Foundation), y que al mismo tiempo usa para la sección de administración el *Rails asset pipeline* sin crear conflictos entre ambos caminos que toman los archivos de estilos.
 
 Para profundizar un poco más en el manejo de assets usando Gulp (en Rails) observar el siguiente [proyecto en github](https://github.com/vigetlabs/gulp-rails-pipeline).
